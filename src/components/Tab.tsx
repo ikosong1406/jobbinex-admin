@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, NavLink, useLocation, useNavigate } from "react-router-dom";
-import { IoGrid, IoLogOut } from "react-icons/io5";
+import { IoLogOut } from "react-icons/io5";
 import { FaUser, FaUsers, FaBriefcase } from "react-icons/fa";
 import { MdPayments } from "react-icons/md";
 import localforage from "localforage";

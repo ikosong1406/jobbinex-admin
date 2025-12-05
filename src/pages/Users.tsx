@@ -11,7 +11,6 @@ import {
   FaUserTag,
 } from "react-icons/fa";
 import axios, { AxiosError } from "axios";
-import { useNavigate } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
 import Api from "../components/Api";
 
@@ -52,7 +51,6 @@ interface ApiResponse {
 }
 
 const UsersPage: React.FC = () => {
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [users, setUsers] = useState<User[]>([]);
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
