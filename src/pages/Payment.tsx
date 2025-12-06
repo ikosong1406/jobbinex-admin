@@ -10,8 +10,8 @@ import {
   FaSync,
   FaPhone,
 } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 import axios, { AxiosError } from "axios";
-import localforage from "localforage";
 import { useNavigate } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
 import Api from "../components/Api";
@@ -236,12 +236,6 @@ const PaymentsPage: React.FC = () => {
 
     try {
       setVerifyingId(paymentId);
-      const token = await localforage.getItem("authToken");
-
-      if (!token) {
-        toast.error("Authentication required");
-        return;
-      }
 
       const verifyData = {
         paymentId,
@@ -340,7 +334,7 @@ const PaymentsPage: React.FC = () => {
                 onClick={() => setSelectedPayment(null)}
                 className="text-gray-400 hover:text-gray-600"
               >
-                <FaTimesCircle className="text-xl" />
+                <IoClose className="text-xl" />
               </button>
             </div>
 
