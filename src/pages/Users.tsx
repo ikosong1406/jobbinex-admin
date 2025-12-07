@@ -10,6 +10,7 @@ import {
   FaFileAlt,
   FaUserTag,
 } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 import axios, { AxiosError } from "axios";
 import { toast, Toaster } from "react-hot-toast";
 import Api from "../components/Api";
@@ -300,7 +301,7 @@ const UsersPage: React.FC = () => {
                 onClick={() => setSelectedUser(null)}
                 className="text-gray-400 hover:text-gray-600"
               >
-                <FaEye className="text-xl" />
+                <IoClose className="text-xl" />
               </button>
             </div>
 
